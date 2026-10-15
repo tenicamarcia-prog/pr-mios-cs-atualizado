@@ -6488,8 +6488,8 @@
         const trimAvg = ((s1 + s2 + s3) / 3).toFixed(2);
         const pts = (typeof c.points === 'number' && !isNaN(c.points)) ? c.points : Math.round(Number(trimAvg) * 1450);
 
-        let badgeClass = "bg-amber-50 text-amber-800 border-amber-200";
-        let badgeText = "⚠️ Em Desenvolvimento";
+        let badgeClass = "bg-rose-50 text-rose-700 border-rose-200";
+        let badgeText = "⚠️ Meta Abaixo";
         const avgNum = parseFloat(trimAvg);
         if (avgNum >= 2.75) {
           badgeClass = "bg-emerald-50 text-emerald-700 border-emerald-200";
@@ -6575,9 +6575,13 @@
               <div class="flex items-center justify-end gap-1.5">
                 ${supplyBtnHtml}
                 ${editBtnHtml}
-                <button onclick="openCollaboratorDrawer('${c.id}')" class="px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-brand-50 hover:text-brand-600 text-slate-600 text-xs font-bold transition flex items-center gap-1 cursor-pointer">
-                  <span>Raio-X</span>
-                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <!-- Visualizar -->
+                <button onclick="openCollaboratorDrawer('${c.id}')" class="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 transition cursor-pointer" title="Visualizar dados detalhados">
+                  <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                </button>
+                <!-- Excluir -->
+                <button onclick="deleteCollaborator('${c.id}')" class="p-1.5 rounded-lg bg-red-50 hover:bg-red-100 text-red-600 hover:text-red-800 transition cursor-pointer" title="Excluir colaborador">
+                  <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
                 </button>
               </div>
             </td>
@@ -8211,6 +8215,17 @@
       }
 
       safeShowModal(modal);
+      lucide.createIcons();
+    }
+
+    function deleteCollaborator(id) {
+      const c = COLLABORATORS.find(item => item.id === id);
+      if (!c) return;
+      if (!confirm(`Tem certeza que deseja excluir o colaborador "${c.name}"? Esta ação não pode ser desfeita.`)) return;
+      const idx = COLLABORATORS.findIndex(item => item.id === id);
+      if (idx !== -1) COLLABORATORS.splice(idx, 1);
+      saveToStorage();
+      renderCollaboratorsTable();
       lucide.createIcons();
     }
 
