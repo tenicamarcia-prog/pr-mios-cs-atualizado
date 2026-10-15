@@ -921,18 +921,7 @@
           <span class="px-1.5 py-0.2 rounded-full bg-white/20 text-[10px] font-black">Coordenadoria</span>
         </button>
 
-        <!-- 2. Níveis 2 & 3 (Disputa dos 5 Prêmios) -->
-        <button 
-          class="level-tab px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-2 cursor-pointer" 
-          data-level="n2_n3" 
-          onclick="switchLevelFilter('n2_n3')"
-        >
-          <i data-lucide="flame" class="w-4 h-4 text-amber-500"></i>
-          <span>Níveis 2 & 3 • Disputa dos 5 Prêmios</span>
-          <span class="px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold">5 Prêmios</span>
-        </button>
-
-        <!-- 3. Nível 1 (Individual) -->
+        <!-- 2. Nível 1 (Individual) -->
         <button 
           class="level-tab px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-2 cursor-pointer" 
           data-level="n1" 
@@ -941,6 +930,17 @@
           <i data-lucide="user" class="w-4 h-4 text-blue-500"></i>
           <span>Nível 1 • Apuração Individual</span>
           <span class="px-1.5 py-0.2 rounded-full bg-slate-200 text-slate-700 text-[10px] font-bold">Individual</span>
+        </button>
+
+        <!-- 3. Níveis 2 & 3 (Disputa dos 5 Prêmios) -->
+        <button 
+          class="level-tab px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-2 cursor-pointer" 
+          data-level="n2_n3" 
+          onclick="switchLevelFilter('n2_n3')"
+        >
+          <i data-lucide="flame" class="w-4 h-4 text-amber-500"></i>
+          <span>Níveis 2 & 3 • Disputa dos 5 Prêmios</span>
+          <span class="px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold">5 Prêmios</span>
         </button>
       </div>
 
@@ -1199,26 +1199,26 @@
     <!-- SUB-TABS: SEPARAÇÃO DOS PRÊMIOS POR NÍVEL (CONFORME SOLICITADO) -->
     <div class="bg-white rounded-2xl p-2 border border-slate-200 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-3">
       <div class="flex items-center gap-1.5" id="prizeTabs">
-        <!-- Níveis 2 & 3 -->
-        <button 
-          id="tabPrizeN2N3" 
-          onclick="switchPrizeLevelFilter('n2_n3')" 
-          class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-white shadow-sm shadow-amber-500/20 transition flex items-center gap-2 cursor-pointer"
-        >
-          <i data-lucide="trophy" class="w-4 h-4 text-white"></i>
-          <span>Níveis 2 & 3 • Os 5 Prêmios Oficiais da Disputa</span>
-          <span class="px-1.5 py-0.2 rounded-full bg-white/20 text-[10px] font-black">5 Prêmios</span>
-        </button>
-
         <!-- Nível 1 -->
         <button 
           id="tabPrizeN1" 
           onclick="switchPrizeLevelFilter('n1')" 
+          class="px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white shadow-sm shadow-brand-500/20 transition flex items-center gap-2 cursor-pointer"
+        >
+          <i data-lucide="award" class="w-4 h-4 text-white"></i>
+          <span>Nível 1 • Prêmios & Resgates Individuais</span>
+          <span class="px-1.5 py-0.2 rounded-full bg-white/20 text-[10px] font-black">Individual</span>
+        </button>
+
+        <!-- Níveis 2 & 3 -->
+        <button 
+          id="tabPrizeN2N3" 
+          onclick="switchPrizeLevelFilter('n2_n3')" 
           class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-2 cursor-pointer"
         >
-          <i data-lucide="award" class="w-4 h-4 text-slate-400"></i>
-          <span>Nível 1 • Prêmios & Resgates Individuais</span>
-          <span class="px-1.5 py-0.2 rounded-full bg-slate-200 text-slate-700 text-[10px] font-bold">Individual</span>
+          <i data-lucide="trophy" class="w-4 h-4 text-slate-400"></i>
+          <span>Níveis 2 & 3 • Os 5 Prêmios Oficiais da Disputa</span>
+          <span class="px-1.5 py-0.2 rounded-full bg-slate-200 text-slate-700 text-[10px] font-bold">5 Prêmios</span>
         </button>
       </div>
 
@@ -2739,7 +2739,7 @@
     cleanLocalStorageQuota();
 
     let PRIZES = JSON.parse(localStorage.getItem('ateky_prizes_v4')) || DEFAULT_PRIZES;
-    let currentPrizeLevelFilter = 'n2_n3'; // 'n2_n3' ou 'n1'
+    let currentPrizeLevelFilter = 'n1'; // 'n1' ou 'n2_n3'
 
     function savePrizesStorage() {
       localStorage.setItem('ateky_prizes_v4', JSON.stringify(PRIZES));
