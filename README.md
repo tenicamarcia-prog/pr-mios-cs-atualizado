@@ -10,6 +10,6 @@ Plataforma unificada da Ateky Internet para o setor Centro de Soluções:
 - Cerimônia de premiação com vinheta estilo cinema, transição central e dashboard interativo.
 
 ## 🌐 Deploy em Produção
-- **URL Online (Vercel)**: [https://ateky-premiacao-cs.vercel.app](https://ateky-premiacao-cs.vercel.app)
+- **URL Online (Vercel)**: [https://ateky-premiacao-cs.vercel.app](https://ateky-portal-vercel.vercel.app/)
 - **Repositório GitHub**: [tenicamarcia-prog/pr-mios-cs-atualizado](https://github.com/tenicamarcia-prog/pr-mios-cs-atualizado)
 
