@@ -1314,7 +1314,31 @@
       </div>
 
       <div class="py-4 space-y-3.5">
-        <!-- CARD GRUPO 1: CENTRO DE SOLUÇÕES NÍVEL 1 -->
+        <!-- CARD GRUPO 1: TODAS AS EQUIPES (APRESENTAÇÃO GERAL) -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-slate-50/70 via-slate-100/40 to-white border-2 border-slate-200 hover:border-slate-500 transition shadow-xs group flex flex-col justify-between gap-3">
+          <div class="flex items-start justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-600 to-indigo-600 text-white flex items-center justify-center font-black text-lg shadow-md shadow-brand-500/20">
+                CS
+              </div>
+              <div>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 font-extrabold uppercase">Apresentação Geral</span>
+                <h4 class="text-sm font-black text-slate-900 mt-0.5">Toda a Equipe Centro de Soluções</h4>
+                <p class="text-xs text-slate-500">Ranking geral de pontuação contemplando todas as áreas do setor.</p>
+              </div>
+            </div>
+          </div>
+          <button 
+            type="button" 
+            onclick="document.getElementById('presentationSelectorModal').close(); startPresentationMode('all');" 
+            class="w-full py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-black shadow-md shadow-brand-500/20 transition flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+          >
+            <i data-lucide="play" class="w-4 h-4 fill-white"></i>
+            <span>Iniciar Apresentação Geral ➔</span>
+          </button>
+        </div>
+
+        <!-- CARD GRUPO 2: CENTRO DE SOLUÇÕES NÍVEL 1 -->
         <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-white border-2 border-brand-200 hover:border-brand-500 transition shadow-xs group flex flex-col justify-between gap-3">
           <div class="flex items-start justify-between">
             <div class="flex items-center gap-3">
@@ -1322,9 +1346,9 @@
                 N1
               </div>
               <div>
-                <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 font-extrabold uppercase">Apresentação Separada</span>
-                <h4 class="text-sm font-black text-slate-900 mt-0.5">Centro de Soluções Nível 1 (N1)</h4>
-                <p class="text-xs text-slate-500">Ganhadores do N1 (Nome e Foto) + Lista decrescente dos demais e notas abaixo do Ouro.</p>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 font-extrabold uppercase">Apresentação Por Área</span>
+                <h4 class="text-sm font-black text-slate-900 mt-0.5">Equipe de Nível 1 (N1)</h4>
+                <p class="text-xs text-slate-500">Destaques e colocações da área de Nível 1 (N1) e Processos.</p>
               </div>
             </div>
           </div>
@@ -1334,11 +1358,11 @@
             class="w-full py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-black shadow-md shadow-brand-500/20 transition flex items-center justify-center gap-2 cursor-pointer active:scale-95"
           >
             <i data-lucide="play" class="w-4 h-4 fill-white"></i>
-            <span>Iniciar Apresentação do Nível 1 ➔</span>
+            <span>Iniciar Apresentação de Nível 1 (N1) ➔</span>
           </button>
         </div>
 
-        <!-- CARD GRUPO 2: CENTRO DE SOLUÇÕES NÍVEIS 2 & 3 -->
+        <!-- CARD GRUPO 3: CENTRO DE SOLUÇÕES NÍVEIS 2 & 3 -->
         <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-50/70 via-orange-50/40 to-white border-2 border-amber-200 hover:border-amber-500 transition shadow-xs group flex flex-col justify-between gap-3">
           <div class="flex items-start justify-between">
             <div class="flex items-center gap-3">
@@ -1346,9 +1370,9 @@
                 N2/3
               </div>
               <div>
-                <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-extrabold uppercase">Apresentação Separada</span>
-                <h4 class="text-sm font-black text-slate-900 mt-0.5">Centro de Soluções Níveis 2 & 3 (N2 & N3)</h4>
-                <p class="text-xs text-slate-500">Ganhadores da Disputa dos 5 Prêmios (Nome e Foto) + Lista decrescente dos demais e notas abaixo do Ouro.</p>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-extrabold uppercase">Apresentação Por Área</span>
+                <h4 class="text-sm font-black text-slate-900 mt-0.5">Níveis 2 & 3 (N2 & N3)</h4>
+                <p class="text-xs text-slate-500">N2 e N3 disputam os 5 prêmios juntos. Colocações dos Business Partners e Nível 2 (N2).</p>
               </div>
             </div>
           </div>
@@ -1358,7 +1382,7 @@
             class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs font-black shadow-md shadow-amber-500/20 transition flex items-center justify-center gap-2 cursor-pointer active:scale-95"
           >
             <i data-lucide="play" class="w-4 h-4 fill-white"></i>
-            <span>Iniciar Apresentação dos Níveis 2 & 3 ➔</span>
+            <span>Iniciar Apresentação Níveis 2 & 3 (N2/N3) ➔</span>
           </button>
         </div>
       </div>
@@ -7891,6 +7915,10 @@
         if (lvl === 'n1') {
           btnN1.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-black transition cursor-pointer bg-blue-600 text-white shadow-md";
           btnN2N3.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else if (lvl === 'all') {
+          btnN1.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+          btnN2N3.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
         } else {
           btnN1.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
           btnN2N3.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-black transition cursor-pointer bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-md";
