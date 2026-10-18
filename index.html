@@ -1000,7 +1000,7 @@
       </div>
       <div class="flex items-center gap-4 text-right">
         <div class="hidden sm:block">
-          <div class="text-[10px] text-slate-400 font-bold uppercase">Operação Centro de Soluções</div>
+          <div class="text-[10px] text-slate-400 font-bold uppercase">Centro de Soluções</div>
           <div class="text-xs font-black text-emerald-600 flex items-center justify-end gap-1">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span id="sectorStatusText">Fechamento Ativo</span>
@@ -5101,7 +5101,7 @@
         'Guilherme Matos': 'assets/images/avatar_1.jpg'
       };
       COLLABORATORS.forEach(c => {
-        if (!c.teamName || c.teamName.includes('Suporte') || c.teamName.includes('Gestão') || c.teamName.includes('RH')) {
+        if (!c.teamName || c.teamName.includes('Suporte')) {
           c.teamName = `Centro de Soluções ${(c.tierLevel || 'N1').toUpperCase()}`;
         }
         if ((!c.photo || c.photo.length < 10) && defaultWinnerPhotos[c.name]) {
@@ -5236,7 +5236,7 @@
           ADMINS[k].avatar = DEFAULT_ADMINS[k].avatar;
         }
         ADMINS[k].isReadonly = false;
-        if (ADMINS[k].role && (ADMINS[k].role.includes('Gestão') || ADMINS[k].role.includes('Operações'))) {
+        if (ADMINS[k].role && ADMINS[k].role.includes('Gestão')) {
           ADMINS[k].role = DEFAULT_ADMINS[k].role;
           ADMINS[k].scopeTitle = DEFAULT_ADMINS[k].scopeTitle;
         }
@@ -6780,7 +6780,7 @@
       } catch (e) {}
 
       if (level === 'all') {
-        title.textContent = "Fechamento Geral da Operação • Todos os Colaboradores (N1, N2 & N3)";
+        title.textContent = "Centro de Soluções • Todos os Colaboradores (N1, N2 & N3)";
         badgeText.innerHTML = `<strong>Visão Geral:</strong> ${escapeHtml((ADMINS.coord_fernando && ADMINS.coord_fernando.name) || 'Coordenador Fernando Mateus')} com acesso unificado aos líderes Antônio e Michel.`;
         if (sectorPhoto) sectorPhoto.src = (ADMINS.coord_fernando && ADMINS.coord_fernando.avatar) || '';
         if (sectorTag) { sectorTag.textContent = "Coordenador Geral"; sectorTag.className = "text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.2 rounded-full bg-brand-600 text-white"; }
