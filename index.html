@@ -6858,7 +6858,7 @@
         const pts = (typeof c.points === 'number' && !isNaN(c.points)) ? c.points : Math.round(Number(trimAvg) * 1450);
 
         let badgeClass = "bg-rose-50 text-rose-700 border-rose-200";
-        let badgeText = "⚠️ Meta Abaixo";
+        let badgeText = "⚠️ Abaixo da Média";
         const avgNum = parseFloat(trimAvg);
         if (avgNum >= 2.75) {
           badgeClass = "bg-emerald-50 text-emerald-700 border-emerald-200";
@@ -8736,7 +8736,7 @@
         badge.textContent = "Meta Atingida";
       } else {
         badge.className = "px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200";
-        badge.textContent = "Em Evolução";
+        badge.textContent = "Abaixo da Média";
       }
 
       switchDrawerMonth(0);
@@ -9589,7 +9589,7 @@
           const formulaText = `=${metricSum} + (${ind}*${indRate}) - (${fal}*${faltaRate})`;
 
           const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
           const statusColor = parseFloat(trimAvg) >= 2.75 ? "text-emerald-700 bg-emerald-50 border-emerald-200" : (parseFloat(trimAvg) >= 2.5 ? "text-sky-700 bg-sky-50 border-sky-200" : "text-amber-700 bg-amber-50 border-amber-200");
 
           rows.push(`
@@ -9664,7 +9664,7 @@
           const monthTotal = metricSum + indPts - falPts;
           const formulaText = `=${metricSum}+(${ind}*${indRate})-(${fal}*${faltaRate})`;
           const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
 
           const line = [
             `"${c.name}"`,
@@ -9736,7 +9736,7 @@
           const monthTotal = metricSum + indPts - falPts;
           const formulaText = `=${metricSum}+(${ind}*${indRate})-(${fal}*${faltaRate})`;
           const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
 
           headers.push(`${c.name}\t${c.tierLevel.toUpperCase()}\tMês ${mIdx+1}\t${metricSum}\t${ind}\t${indPts}\t${fal}\t${falPts}\t${formulaText}\t${monthTotal}\t${c.points||0}\t${trimAvg}\t${statusText}`);
         });
@@ -10149,7 +10149,7 @@
         const metricPts = Math.max(0, (c.points || 0) - indPts + falPts);
 
         const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-        const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+        const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
         const statusColor = parseFloat(trimAvg) >= 2.75 ? "text-emerald-700 bg-emerald-50 border-emerald-200" : (parseFloat(trimAvg) >= 2.5 ? "text-sky-700 bg-sky-50 border-sky-200" : "text-amber-700 bg-amber-50 border-amber-200");
 
         return `
