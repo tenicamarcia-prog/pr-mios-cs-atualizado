@@ -1000,7 +1000,7 @@
       </div>
       <div class="flex items-center gap-4 text-right">
         <div class="hidden sm:block">
-          <div class="text-[10px] text-slate-400 font-bold uppercase">Operação Centro de Soluções</div>
+          <div class="text-[10px] text-slate-400 font-bold uppercase">Centro de Soluções</div>
           <div class="text-xs font-black text-emerald-600 flex items-center justify-end gap-1">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span id="sectorStatusText">Fechamento Ativo</span>
@@ -1314,7 +1314,31 @@
       </div>
 
       <div class="py-4 space-y-3.5">
-        <!-- CARD GRUPO 1: CENTRO DE SOLUÇÕES NÍVEL 1 -->
+        <!-- CARD GRUPO 1: TODAS AS EQUIPES (APRESENTAÇÃO GERAL) -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-slate-50/70 via-slate-100/40 to-white border-2 border-slate-200 hover:border-slate-500 transition shadow-xs group flex flex-col justify-between gap-3">
+          <div class="flex items-start justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-600 to-indigo-600 text-white flex items-center justify-center font-black text-lg shadow-md shadow-brand-500/20">
+                CS
+              </div>
+              <div>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 font-extrabold uppercase">Apresentação Geral</span>
+                <h4 class="text-sm font-black text-slate-900 mt-0.5">Toda a Equipe Centro de Soluções</h4>
+                <p class="text-xs text-slate-500">Ranking geral de pontuação contemplando todas as áreas do setor.</p>
+              </div>
+            </div>
+          </div>
+          <button 
+            type="button" 
+            onclick="document.getElementById('presentationSelectorModal').close(); startPresentationMode('all');" 
+            class="w-full py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-black shadow-md shadow-brand-500/20 transition flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+          >
+            <i data-lucide="play" class="w-4 h-4 fill-white"></i>
+            <span>Iniciar Apresentação Geral ➔</span>
+          </button>
+        </div>
+
+        <!-- CARD GRUPO 2: CENTRO DE SOLUÇÕES NÍVEL 1 -->
         <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-white border-2 border-brand-200 hover:border-brand-500 transition shadow-xs group flex flex-col justify-between gap-3">
           <div class="flex items-start justify-between">
             <div class="flex items-center gap-3">
@@ -1322,9 +1346,9 @@
                 N1
               </div>
               <div>
-                <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 font-extrabold uppercase">Apresentação Separada</span>
-                <h4 class="text-sm font-black text-slate-900 mt-0.5">Centro de Soluções Nível 1 (N1)</h4>
-                <p class="text-xs text-slate-500">Ganhadores do N1 (Nome e Foto) + Lista decrescente dos demais e notas abaixo do Ouro.</p>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 font-extrabold uppercase">Apresentação Por Área</span>
+                <h4 class="text-sm font-black text-slate-900 mt-0.5">Equipe de Nível 1 (N1)</h4>
+                <p class="text-xs text-slate-500">Destaques e colocações da área de Nível 1 (N1) e Processos.</p>
               </div>
             </div>
           </div>
@@ -1334,11 +1358,11 @@
             class="w-full py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-black shadow-md shadow-brand-500/20 transition flex items-center justify-center gap-2 cursor-pointer active:scale-95"
           >
             <i data-lucide="play" class="w-4 h-4 fill-white"></i>
-            <span>Iniciar Apresentação do Nível 1 ➔</span>
+            <span>Iniciar Apresentação de Nível 1 (N1) ➔</span>
           </button>
         </div>
 
-        <!-- CARD GRUPO 2: CENTRO DE SOLUÇÕES NÍVEIS 2 & 3 -->
+        <!-- CARD GRUPO 3: CENTRO DE SOLUÇÕES NÍVEIS 2 & 3 -->
         <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-50/70 via-orange-50/40 to-white border-2 border-amber-200 hover:border-amber-500 transition shadow-xs group flex flex-col justify-between gap-3">
           <div class="flex items-start justify-between">
             <div class="flex items-center gap-3">
@@ -1346,9 +1370,9 @@
                 N2/3
               </div>
               <div>
-                <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-extrabold uppercase">Apresentação Separada</span>
-                <h4 class="text-sm font-black text-slate-900 mt-0.5">Centro de Soluções Níveis 2 & 3 (N2 & N3)</h4>
-                <p class="text-xs text-slate-500">Ganhadores da Disputa dos 5 Prêmios (Nome e Foto) + Lista decrescente dos demais e notas abaixo do Ouro.</p>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-extrabold uppercase">Apresentação Por Área</span>
+                <h4 class="text-sm font-black text-slate-900 mt-0.5">Níveis 2 & 3 (N2 & N3)</h4>
+                <p class="text-xs text-slate-500">N2 e N3 disputam os 5 prêmios juntos. Colocações dos Business Partners e Nível 2 (N2).</p>
               </div>
             </div>
           </div>
@@ -1358,7 +1382,7 @@
             class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs font-black shadow-md shadow-amber-500/20 transition flex items-center justify-center gap-2 cursor-pointer active:scale-95"
           >
             <i data-lucide="play" class="w-4 h-4 fill-white"></i>
-            <span>Iniciar Apresentação dos Níveis 2 & 3 ➔</span>
+            <span>Iniciar Apresentação Níveis 2 & 3 (N2/N3) ➔</span>
           </button>
         </div>
       </div>
@@ -5077,7 +5101,7 @@
         'Guilherme Matos': 'assets/images/avatar_1.jpg'
       };
       COLLABORATORS.forEach(c => {
-        if (!c.teamName || c.teamName.includes('Suporte') || c.teamName.includes('Gestão') || c.teamName.includes('RH')) {
+        if (!c.teamName || c.teamName.includes('Suporte')) {
           c.teamName = `Centro de Soluções ${(c.tierLevel || 'N1').toUpperCase()}`;
         }
         if ((!c.photo || c.photo.length < 10) && defaultWinnerPhotos[c.name]) {
@@ -5212,7 +5236,7 @@
           ADMINS[k].avatar = DEFAULT_ADMINS[k].avatar;
         }
         ADMINS[k].isReadonly = false;
-        if (ADMINS[k].role && (ADMINS[k].role.includes('Gestão') || ADMINS[k].role.includes('Operações'))) {
+        if (ADMINS[k].role && ADMINS[k].role.includes('Gestão')) {
           ADMINS[k].role = DEFAULT_ADMINS[k].role;
           ADMINS[k].scopeTitle = DEFAULT_ADMINS[k].scopeTitle;
         }
@@ -6756,7 +6780,7 @@
       } catch (e) {}
 
       if (level === 'all') {
-        title.textContent = "Fechamento Geral da Operação • Todos os Colaboradores (N1, N2 & N3)";
+        title.textContent = "Centro de Soluções • Todos os Colaboradores (N1, N2 & N3)";
         badgeText.innerHTML = `<strong>Visão Geral:</strong> ${escapeHtml((ADMINS.coord_fernando && ADMINS.coord_fernando.name) || 'Coordenador Fernando Mateus')} com acesso unificado aos líderes Antônio e Michel.`;
         if (sectorPhoto) sectorPhoto.src = (ADMINS.coord_fernando && ADMINS.coord_fernando.avatar) || '';
         if (sectorTag) { sectorTag.textContent = "Coordenador Geral"; sectorTag.className = "text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.2 rounded-full bg-brand-600 text-white"; }
@@ -6858,7 +6882,7 @@
         const pts = (typeof c.points === 'number' && !isNaN(c.points)) ? c.points : Math.round(Number(trimAvg) * 1450);
 
         let badgeClass = "bg-rose-50 text-rose-700 border-rose-200";
-        let badgeText = "⚠️ Meta Abaixo";
+        let badgeText = "⚠️ Abaixo da Média";
         const avgNum = parseFloat(trimAvg);
         if (avgNum >= 2.75) {
           badgeClass = "bg-emerald-50 text-emerald-700 border-emerald-200";
@@ -7891,6 +7915,10 @@
         if (lvl === 'n1') {
           btnN1.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-black transition cursor-pointer bg-blue-600 text-white shadow-md";
           btnN2N3.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        } else if (lvl === 'all') {
+          btnN1.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+          btnN2N3.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
+        }
         } else {
           btnN1.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer text-slate-400 hover:text-white";
           btnN2N3.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-black transition cursor-pointer bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-md";
@@ -8736,7 +8764,7 @@
         badge.textContent = "Meta Atingida";
       } else {
         badge.className = "px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200";
-        badge.textContent = "Em Evolução";
+        badge.textContent = "Abaixo da Média";
       }
 
       switchDrawerMonth(0);
@@ -9589,7 +9617,7 @@
           const formulaText = `=${metricSum} + (${ind}*${indRate}) - (${fal}*${faltaRate})`;
 
           const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
           const statusColor = parseFloat(trimAvg) >= 2.75 ? "text-emerald-700 bg-emerald-50 border-emerald-200" : (parseFloat(trimAvg) >= 2.5 ? "text-sky-700 bg-sky-50 border-sky-200" : "text-amber-700 bg-amber-50 border-amber-200");
 
           rows.push(`
@@ -9664,7 +9692,7 @@
           const monthTotal = metricSum + indPts - falPts;
           const formulaText = `=${metricSum}+(${ind}*${indRate})-(${fal}*${faltaRate})`;
           const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
 
           const line = [
             `"${c.name}"`,
@@ -9736,7 +9764,7 @@
           const monthTotal = metricSum + indPts - falPts;
           const formulaText = `=${metricSum}+(${ind}*${indRate})-(${fal}*${faltaRate})`;
           const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+          const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
 
           headers.push(`${c.name}\t${c.tierLevel.toUpperCase()}\tMês ${mIdx+1}\t${metricSum}\t${ind}\t${indPts}\t${fal}\t${falPts}\t${formulaText}\t${monthTotal}\t${c.points||0}\t${trimAvg}\t${statusText}`);
         });
@@ -10149,7 +10177,7 @@
         const metricPts = Math.max(0, (c.points || 0) - indPts + falPts);
 
         const trimAvg = ((c.m1Score + c.m2Score + c.m3Score) / 3).toFixed(2);
-        const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Em Evolução");
+        const statusText = parseFloat(trimAvg) >= 2.75 ? "Superou a Meta" : (parseFloat(trimAvg) >= 2.5 ? "Meta Atingida" : "Abaixo da Média");
         const statusColor = parseFloat(trimAvg) >= 2.75 ? "text-emerald-700 bg-emerald-50 border-emerald-200" : (parseFloat(trimAvg) >= 2.5 ? "text-sky-700 bg-sky-50 border-sky-200" : "text-amber-700 bg-amber-50 border-amber-200");
 
         return `
